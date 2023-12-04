@@ -110,7 +110,7 @@
       const cambioP = document.querySelector("div > p");
       const changePcontent = function (testo) {
         cambioP.innerText = testo;
-        console.log("P DI DIV CAMBIATO:", testo);
+        console.log("P DI PRIMO DIV CAMBIATO:", testo);
       };
 
       changePcontent("BUONASERA, HO APPENA CAMBIATO QUESTO TESTO");
@@ -119,8 +119,12 @@
            Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
           */
 
-      const changeUrls = function () {};
-
+      const cambioH = document.querySelector("div > a");
+      const changeUrls = function (href) {
+        cambioH.setAttribute("href", "https://www.google.com");
+        console.log("CAMBIATO URL TRANNE CHE DI FOOTER IN:", href);
+      };
+      changeUrls("https://www.google.com");
       /* ESERCIZIO 5
            Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
         */
